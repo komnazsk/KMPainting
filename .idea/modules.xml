@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/KMPainting.main.iml" filepath="$PROJECT_DIR$/.idea/modules/KMPainting.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.github.komnazsk.KMPainting.main.iml" filepath="$PROJECT_DIR$/.idea/modules/org.github.komnazsk.KMPainting.main.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,4 @@
+name: KMPainting
+version: '1.0'
+main: org.github.komnazsk.kmpainting.KMPainting
+api-version: '1.21'
