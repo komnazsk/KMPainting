@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'org.github.komnazsk'
-version = '1.0'
+version = '1.0-MC1.21'
 
 repositories {
     mavenCentral()
