@@ -6,7 +6,6 @@ import org.bukkit.entity.Painting;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.Action;
 import org.bukkit.event.hanging.HangingBreakByEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
@@ -49,9 +48,9 @@ public class PaitingClickListener implements Listener {
                 // Tip: Left-click events are not registered.
                 // This is because onBlockHangingBreak is called
                 // as an event when a painting is destroyed.
-                case Action.RIGHT_CLICK_BLOCK:
+                case RIGHT_CLICK_BLOCK:
                     // Fall through
-                case Action.RIGHT_CLICK_AIR:
+                case RIGHT_CLICK_AIR:
                     // The event will be canceled to prevent the paintings from being torn down.
                     event.setCancelled(true);
                     // If you right-click a painting, replace it with the next painting.
