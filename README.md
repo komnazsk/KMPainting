@@ -26,7 +26,7 @@ The plugin does not require any additional configuration. Simply install it and 
 
 ## Compatibility
 
-- Minecraft Java Edition 1.21
+- Minecraft Java Edition 1.20.x
 - Spigot Server
 
 ## License
