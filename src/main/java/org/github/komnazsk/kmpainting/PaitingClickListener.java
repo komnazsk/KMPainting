@@ -56,8 +56,9 @@ public class PaitingClickListener implements Listener {
                     event.setCancelled(true);
                     // If you right-click a painting, replace it with the next painting.
                     // Only place paintings that can be placed.
-                    Art rightClickArt = ArtCycler.getNext(clickedPainting.getArt());
-                    while (!clickedPainting.setArt(rightClickArt)) {
+                    Art startArt = clickedPainting.getArt();
+                    Art rightClickArt = ArtCycler.getNext(startArt);
+                    while ((rightClickArt != startArt) && !clickedPainting.setArt(rightClickArt)) {
                         rightClickArt = ArtCycler.getNext(rightClickArt);
                     }
                     break;
@@ -91,15 +92,14 @@ public class PaitingClickListener implements Listener {
             return;
         }
 
-        if (event.getEntity() instanceof Painting) {
+        if (event.getEntity() instanceof Painting clickedPainting) {
             // The event will be canceled to prevent the paintings from being torn down.
             event.setCancelled(true);
-            // Get the painting the player is looking at
-            Painting clickedPainting = (Painting)event.getEntity();
             // If you left-click on a painting, replace it with the previous painting.
             // Only place paintings that can be placed.
-            Art leftClickArt = ArtCycler.getPrev(clickedPainting.getArt());
-            while (!clickedPainting.setArt(leftClickArt)) {
+            Art startArt = clickedPainting.getArt();
+            Art leftClickArt = ArtCycler.getPrev(startArt);
+            while ((leftClickArt != startArt) && !clickedPainting.setArt(leftClickArt)) {
                 leftClickArt = ArtCycler.getPrev(leftClickArt);
             }
         }
